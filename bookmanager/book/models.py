@@ -16,6 +16,8 @@ id	name	gender	book
 class BookInfo(models.Model):
     # 创建字段，字段类型...
     name = models.CharField(max_length=10)
+    def __str__(self):
+        return self.name
 class PeopleInfo(models.Model):
     name = models.CharField(max_length=10)
     gender = models.BooleanField()
